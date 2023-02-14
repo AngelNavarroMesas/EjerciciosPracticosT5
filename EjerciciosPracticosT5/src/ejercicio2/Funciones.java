@@ -60,12 +60,12 @@ public interface Funciones {
 		
 	}
 	
-	public static void comprobacion(int pJugador1, int pJugador2) {
+	public static void comprobacion(double pJugador1, double pJugador2) {
 		
 		System.out.println("El jugador1 tiene "+pJugador1+" puntos y el jugador2 tiene "+pJugador2+" puntos");
-		if(pJugador1>pJugador2 && pJugador1<=7.5) {
+		if(pJugador1>pJugador2 && pJugador1<=7.5||pJugador2>7.5 && pJugador1<=7.5) {
 			System.out.println("El jugador1 ha ganado la partida");
-		}else if(pJugador2>pJugador1 && pJugador2<=7.5) {
+		}else if(pJugador2>pJugador1 && pJugador2<=7.5||pJugador1>7.5 && pJugador2<=7.5) {
 			System.out.println("El jugador2 ha ganado la partida");
 		}else if(pJugador1>7.5 && pJugador2>7.5){
 			System.out.println("Nadie ha ganado la partida");

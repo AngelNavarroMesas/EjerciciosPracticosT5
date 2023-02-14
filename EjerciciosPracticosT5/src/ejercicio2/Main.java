@@ -9,6 +9,8 @@ public class Main {
 		pJugador1= Funciones.Turno();
 		System.out.println("Es el turno del jugador2");
 		pJugador2 = Funciones.Turno();
+		
+		Funciones.comprobacion(pJugador1, pJugador2);
 	}
 
 }
