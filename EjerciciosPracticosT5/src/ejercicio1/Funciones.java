@@ -24,9 +24,9 @@ public class Funciones {
 				campo[0]="1";
 			}
 		}
-		if(campo[19]!="*") {
-			if(campo[18]=="*") {
-				campo[19]="1";
+		if(campo[campo.length-1]!="*") {
+			if(campo[campo.length-2]=="*") {
+				campo[campo.length-1]="1";
 			}
 		}
 		
@@ -48,10 +48,9 @@ public class Funciones {
 		Scanner sc = new Scanner(System.in);
 		String vistaJugador[] = new String[campo.length];
 		Arrays.fill(vistaJugador, "=");
-		int x=0, posJugador;
+		int x=1, posJugador;
 		
 		do {
-			System.out.println(Arrays.toString(campo));
 			System.out.println(Arrays.toString(vistaJugador));
 			System.out.println("Introduzca un numero");
 			posJugador = sc.nextInt()-1;
@@ -59,12 +58,17 @@ public class Funciones {
 			vistaJugador[posJugador]=campo[posJugador];
 			if(x==campo.length-6) {
 				System.out.println("ENHORABUENA, HAS GANADO!!!!!!!");
+				System.out.println(Arrays.toString(campo));
 				break;
 			}else if(vistaJugador[posJugador]=="*") {
 				System.out.println("HAS PERDIDO!!!");
+				System.out.println(Arrays.toString(campo));
 				break;
 			}
+			x++;
+			
 		}while(true);
+		
 	}
 	
 	
