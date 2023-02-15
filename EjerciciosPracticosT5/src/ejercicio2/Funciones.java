@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public interface Funciones {
 	
-	public static double Turno(){
+	public static double turno(){
 		Scanner sc = new Scanner(System.in);
 		String[] cartas = {"1","2","3","4","5","6","7","sota","caballo","rey",};
 		String[] palos = {"oros","copas","espadas","bastos"};
